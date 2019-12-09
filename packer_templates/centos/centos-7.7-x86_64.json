@@ -120,6 +120,7 @@
       "iso_checksum_type": "{{user `iso_checksum_type`}}",
       "iso_url": "{{user `mirror`}}/{{user `mirror_directory`}}/{{user `iso_name`}}",
       "output_directory": "{{ user `build_directory` }}/packer-{{user `template`}}-qemu",
+      "qemu_binary": "{{user `qemu_binary`}}",
       "shutdown_command": "echo 'vagrant'|sudo -S /sbin/halt -h -p",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -183,6 +184,7 @@
     "mirror_directory": "7.7.1908/isos/x86_64",
     "name": "centos-7.7",
     "no_proxy": "{{env `no_proxy`}}",
+    "qemu_binary": "qemu-system-x86_64",
     "template": "centos-7.7-x86_64",
     "version": "TIMESTAMP"
   }
